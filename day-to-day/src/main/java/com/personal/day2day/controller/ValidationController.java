@@ -15,7 +15,8 @@ public class ValidationController {
 
     private final JwtTokenServices jwtTokenServices;
 
-    public ValidationController(AuthenticationManager authenticationManager) {
+    public ValidationController(AuthenticationManager authenticationManager, JwtTokenServices jwtTokenServices) {
         this.authenticationManager = authenticationManager;
+        this.jwtTokenServices = jwtTokenServices;
     }
 }
