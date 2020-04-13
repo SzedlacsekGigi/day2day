@@ -14,30 +14,14 @@ import Login from "./Login";
 const Main = () => (
     <Switch>
             <Route exact path="/" component={Landing}/>
-            <Route path="/categories" render={props => (
-                <Categories/>
-            )}/>
-            <Route path="/subcategory/" render={props => (
-                <Subcategories/>
-            )}/>
-            <Route path="/activities" render={props => (
-                <Activities/>
-            )}/>
-            <Route path="/today" render={props => (
-                <Today/>
-            )}/>
-            <Route path="/calendar" render={props => (
-                <Calendar/>
-            )}/>
-            <Route path="/statistics" render={props => (
-                <Stats/>
-            )}/>
-            <Route path="/registration" render={props => (
-                <Registration/>
-            )}/>
-            <Route path="/login" render={props => (
-                <Login/>
-            )}/>
+            <Route path="/categories" component={Categories}/>
+            <Route path="/subcategory/" component={Subcategories}/>
+            <Route path="/activities" component={Activities}/>
+            <Route path="/today" component={Today}/>
+            <Route path="/calendar" component={Calendar}/>
+            <Route path="/statistics" component={Stats}/>
+            <Route path="/registration" component={Registration}/>
+            <Route path="/login" component={Login}/>
     </Switch>
 )
 ;
