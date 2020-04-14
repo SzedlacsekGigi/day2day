@@ -47,17 +47,16 @@ class Login extends Component{
             password: this.state.password
         }).then(response => {
             localStorage.setItem('token', response.data.token);
+            window.location.reload();
         })
             .catch(error => {
                 console.log(error);
             });
-        this.setState({redirect: true});
     };
 
     renderRedirect = () => {
         if (this.state.redirect){
-            this.setState({redirect: false});
-            return <Redirect to={Landing}/>
+            return <Redirect to="/"/>
         }
     };
 

@@ -1,37 +1,52 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 import {Navigation} from "react-mdl";
 
-class AppHeader extends Component{
+class AppHeader extends Component {
+    state = {
+        redirect: false
+    };
+
     logout(e) {
         e.preventDefault();
         localStorage.removeItem("token");
-        this.props.history.push("/");
+        this.setState({redirect: true});
     };
 
+    renderRedirect() {
+        if (this.state.redirect) {
+            return (
+                <Redirect to="/"/>
+            )
+        }
+    }
+
     render() {
-        const regLink = (
-            <Link className="nav-link" to="registration">Registration</Link>
-        );
-        const loginLink = (
-            <Link className="nav-link" to="/login">Login</Link>
-        );
         const regLoginLink = (
-            regLink, loginLink
+            <Navigation className="nav-header">
+                <Link className="nav-link" to="/activities">My Activities</Link>
+                <Link className="nav-link" to="/today">Today</Link>
+                <Link className="nav-link" to="/calendar">Calendar</Link>
+                <Link className="nav-link" to="/statistics">Stats</Link>
+                <Link className="nav-link" to="registration">Registration</Link>
+                <Link className="nav-link" to="/login">Login</Link>
+            </Navigation>
         );
+
         const logoutLink = (
-            <Link className="nav-link" to="/" onClick={this.logout.bind(this)}>Logout</Link>
+            <Navigation className="nav-header">
+                <Link className="nav-link" to="/activities">My Activities</Link>
+                <Link className="nav-link" to="/today">Today</Link>
+                <Link className="nav-link" to="/calendar">Calendar</Link>
+                <Link className="nav-link" to="/statistics">Stats</Link>
+                <Link className="nav-link" to="/" onClick={this.logout.bind(this)}>Hello, {}Logout</Link>
+            </Navigation>
         );
 
         return (
             <div>
-                <Navigation className="nav-header">
-                    <Link className="nav-link" to="/activities">My Activities</Link>
-                    <Link className="nav-link" to="/today">Today</Link>
-                    <Link className="nav-link" to="/calendar">Calendar</Link>
-                    <Link className="nav-link" to="/statistics">Stats</Link>
-                    {localStorage.token ? logoutLink : regLoginLink}
-                </Navigation>
+                {this.renderRedirect()}
+                {localStorage.token ? logoutLink : regLoginLink}
             </div>
         );
     }
