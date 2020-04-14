@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d234bce0-09a9-40af-a968-27f09fc78f87" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/AppHeader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Registration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +83,8 @@
       <workItem from="1586540116009" duration="1197000" />
       <workItem from="1586581045096" duration="637000" />
       <workItem from="1586784962568" duration="619000" />
-      <workItem from="1586788584555" duration="346000" />
+      <workItem from="1586788584555" duration="1255000" />
+      <workItem from="1586839847671" duration="1752000" />
     </task>
     <servers />
   </component>
@@ -91,6 +92,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="291" y="120" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586841246302">
+      <screen x="67" y="27" width="1533" height="873" />
+    </state>
+    <state x="291" y="120" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1533.873@67.27.1533.873" timestamp="1586841246302" />
     <state x="167" y="125" width="1333" height="675" key="DiffContextDialog" timestamp="1585264288674">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
@@ -131,9 +136,9 @@
       <screen x="67" y="27" width="1533" height="873" />
     </state>
     <state x="497" y="208" key="run.anything.popup/67.27.1533.873@67.27.1533.873" timestamp="1586410344379" />
-    <state x="496" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1586429374080">
+    <state x="496" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1586840820526">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
-    <state x="496" y="212" width="672" height="678" key="search.everywhere.popup/67.27.1533.873@67.27.1533.873" timestamp="1586429374080" />
+    <state x="496" y="212" width="672" height="678" key="search.everywhere.popup/67.27.1533.873@67.27.1533.873" timestamp="1586840820526" />
   </component>
 </project>
