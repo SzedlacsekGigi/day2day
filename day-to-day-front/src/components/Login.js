@@ -17,12 +17,24 @@ const style = {
 };
 
 class Login extends Component{
-    state = {
+    constructor() {
+        super();
+        this.state = {
+            username: "",
+            password: "",
+            auth: false,
+            redirect: false
+        };
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+    };
+
+  /*  state = {
         username: "",
         password: "",
         auth: false,
         redirect: false
-    };
+    }; */
 
     onChange = (e) => {
         this.setState({[e.target.name]: e.target.value});
@@ -35,7 +47,10 @@ class Login extends Component{
             password: this.state.password
         }).then(response => {
             localStorage.setItem('token', response.data.token);
-        });
+        })
+            .catch(error => {
+                console.log(error);
+            });
         this.setState({redirect: true});
     };
 
