@@ -5,7 +5,7 @@ import {Navigation} from "react-mdl";
 class AppHeader extends Component{
     logout(e) {
         e.preventDefault();
-        localStorage.removeItem("usertoken");
+        localStorage.removeItem("token");
         this.props.history.push("/");
     };
 
@@ -30,7 +30,7 @@ class AppHeader extends Component{
                     <Link className="nav-link" to="/today">Today</Link>
                     <Link className="nav-link" to="/calendar">Calendar</Link>
                     <Link className="nav-link" to="/statistics">Stats</Link>
-                    {localStorage.usertoken ? regLoginLink : logoutLink}
+                    {localStorage.token ? logoutLink : regLoginLink}
                 </Navigation>
             </div>
         );

@@ -35,7 +35,7 @@ class Login extends Component{
             password: this.state.password
         }).then(response => {
             localStorage.setItem('token', response.data.token);
-        })
+        });
         this.setState({redirect: true});
     };
 
