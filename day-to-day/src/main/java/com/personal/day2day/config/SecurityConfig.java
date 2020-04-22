@@ -34,6 +34,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/activity/add").authenticated()
                 .antMatchers(HttpMethod.DELETE, "/activity/").authenticated()
                 .antMatchers(HttpMethod.GET, "/activity/progress").authenticated()
+                .antMatchers("/validation/**").permitAll()
+                .anyRequest().hasAnyRole("ROLE_ANONYMOUS, ROLE_USER")
                 .and()
                 .addFilterBefore(new JwtTokenFilter(jwtTokenServices), UsernamePasswordAuthenticationFilter.class);
     }

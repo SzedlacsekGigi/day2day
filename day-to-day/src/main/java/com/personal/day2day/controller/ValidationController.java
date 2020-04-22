@@ -41,6 +41,7 @@ public class ValidationController {
 
     @PostMapping("/login")
     public ResponseEntity login(@RequestBody UserCredentials data) {
+        log.info("Incoming user login request");
         try {
             String username = data.getUsername();
             Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, data.getPassword()));
@@ -51,10 +52,13 @@ public class ValidationController {
 
             String token = jwtTokenServices.createToken(username, roles);
 
+            log.info("Creating token for " + username + " with following roles: " + roles);
+
             Map<Object, Object> model = new HashMap<>();
             model.put("username", username);
             model.put("roles", roles);
             model.put("token", token);
+            log.info("Sending token to frontend");
             return ResponseEntity.ok(model);
         } catch (AuthenticationException e) {
             throw new BadCredentialsException("Invalid username/password supplied");
@@ -67,5 +71,7 @@ public class ValidationController {
         String username = data.getUsername();
         String password = data.getPassword();
         userService.saveNewUser(username, password);
+        log.info("New user saved in database");
+        log.info("Username: " + username);
     }
 }

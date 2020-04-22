@@ -5,9 +5,13 @@ import Main from "./components/Main";
 import {Layout} from "react-mdl";
 import {Link} from "react-router-dom";
 import AppHeader from "./components/AppHeader";
+import axios from "axios";
 
 
 function App() {
+    axios.defaults.headers.common = {
+        'Authorization': 'Bearer ' + localStorage.getItem("token")
+    };
     return (
         <div className="App">
             <Layout>

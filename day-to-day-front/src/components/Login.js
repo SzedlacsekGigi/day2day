@@ -47,7 +47,7 @@ class Login extends Component{
             password: this.state.password
         }).then(response => {
             localStorage.setItem('token', response.data.token);
-            window.location.reload();
+            console.log(localStorage.getItem("token"));
         })
             .catch(error => {
                 console.log(error);
