@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d234bce0-09a9-40af-a968-27f09fc78f87" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-to-day/src/main/java/com/personal/day2day/controller/ValidationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../day-to-day/src/main/java/com/personal/day2day/controller/ValidationController.java" afterDir="false" />
-    </list>
-    <list default="true" id="d234bce0-09a9-40af-a968-27f09fc78f87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Activities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Activities.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
@@ -94,6 +88,7 @@
       <workItem from="1586784962568" duration="619000" />
       <workItem from="1586788584555" duration="1255000" />
       <workItem from="1586839847671" duration="5425000" />
+      <workItem from="1587574017528" duration="507000" />
     </task>
     <servers />
   </component>
